@@ -1,0 +1,17 @@
+services:
+  loop_error_monitor:
+    build: .
+    container_name: loop_error_monitor
+    image: loop_error_monitor
+    restart: unless-stopped
+    env_file:
+      - ../../.env
+    networks:
+      - plant_monitor_network
+
+networks:
+  plant_monitor_network:
+    name: plant_monitor_network
+    external: true
+      
+

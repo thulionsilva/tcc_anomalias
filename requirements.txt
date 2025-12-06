@@ -1,0 +1,5 @@
+opcua
+psycopg2-binary
+pandas
+numpy
+requests
