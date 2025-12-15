@@ -382,13 +382,11 @@ def send_state_change_email(malha, which_message):
         smtp_user (str): SMTP username.
         smtp_password (str): SMTP password.
     """
-    recipient = ['tns@poli.br']
-    # recipient = ['tns@poli.br', 'juliano.albuquerque@chlorumsolutions.com']
-    # recipient = ['tns@poli.br', 'nicolas.neto@chlorumsolutions.com']
+    recipient = ['Recipiente@poli.br']
     smtp_server = 'smtp.office365.com'  # Example SMTP server for Office 365
     smtp_port = 587  # Common SMTP port for TLS
-    smtp_user = 'iba.igarassu@chlorumsolutions.com'  # <--- REPLACE WITH YOUR SMTP USERNAME
-    smtp_password  = 'Chlorum@123'  # <--- REPLACE WITH YOUR SMTP PASSWORD
+    smtp_user = 'Email@dominio.com'  # <--- REPLACE WITH YOUR SMTP USERNAME
+    smtp_password  = 'ChlorumSenha'  # <--- REPLACE WITH YOUR SMTP PASSWORD
     subject = f"Alerta Erro de Controle - {malha}"
 
 
@@ -682,3 +680,4 @@ finally:
     flagged_stuck.to_csv('flagged_stuck.csv', index=True)       
     client.disconnect()
     print("Disconnected")
+
